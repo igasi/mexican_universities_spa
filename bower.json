@@ -1,0 +1,20 @@
+{
+  "name": "Mexican Universities",
+  "version": "0.0.0",
+  "authors": [
+    "Isaac Gasi <isaac.gasi@gmail.com>"
+  ],
+  "description": "Mexican Universities, a project demostration for workshop 'Spa with Rest API' to ITP in Sowftware Freedom Day",
+  "main": "js/app.js",
+  "keywords": [
+    "Mexican"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
