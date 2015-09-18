@@ -3,6 +3,16 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass";
 @import "custom";
+@import "susy";
+
+/*Vars and Mixins*/
+
+@mixin borderStyle($borderSize, $borderStyle , $borderColor ){
+  border-width: $borderSize;
+  border-style: $borderStyle;
+  border-color: $borderColor;
+}
+
 
 /*Base styles*/
 body{
@@ -13,11 +23,13 @@ body{
   margin: 0;
 }
 
+/*Wrapper of the app*/
 .wrapper{
   width: 80%;
   height: 80%;
   margin: 0 auto;
 
+  /*Header*/
   header{
     min-height: 10%;
 
@@ -33,9 +45,12 @@ body{
     }
   }
 
+  /*Section styles to APP*/
   section{
-    min-height: 85%;
+    max-height: 85%;
+    overflow: auto;
 
+    /*For active section*/
     .section{
       display: none;
 
@@ -44,6 +59,7 @@ body{
       }
     }
 
+    /*Fisrt part, Profile*/
     .profileContent{
       .user-profile{
         margin: 0 auto;
@@ -60,6 +76,82 @@ body{
       .actions{
         margin-top: 15px;
         text-align: center;
+      }
+    }
+
+
+    .part{
+      /*Second part: States*/
+      &.states.active{
+        @include span(12 of 12 at 1);
+
+        .state-info{
+          display: block;
+        }
+        .state img{
+          width: 120px;
+          height: 120px;
+        }
+      }
+
+      &.universities{
+        display: none;
+      }
+
+      /*Third part: Universities*/
+      &.states{
+        @include span(3 of 12 at 1);
+        margin-right: 0;
+
+        .state-info{
+          display:none;
+        }
+        .state{
+          border: none;
+
+          img{
+            opacity: 0.4;
+            margin-left: 16px;
+          }
+        }
+        .state.active img{
+          width: 140px;
+          height: 140px;
+          opacity: 1;
+          margin-left: 0;
+        }
+
+      }
+      &.universities.active{
+        @include span(9 of 12 at 4);
+        margin-right: 0;
+        display: block;
+      }
+    }
+
+    .state {
+      //@include span(8 of 12 at 3);
+      @include borderStyle(1px, solid, #202020);
+      overflow: hidden;
+      padding: 5px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .state-profile{
+      @include span(3 of 12 at 1);
+
+      img{
+        border-radius: 70px;
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .state-info{
+      @include span(9 of 12 at 4);
+
+      .results {
+        @include span(6 of 12 at 1);
+        margin-right: 0;
       }
     }
 
