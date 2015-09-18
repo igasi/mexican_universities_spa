@@ -5,3 +5,52 @@
 @import "custom";
 
 /*Base styles*/
+body{
+  background: linear-gradient(#ffffff, #e5e5e5);
+  height:100vh;
+}
+.row{
+  margin: 0;
+}
+
+.wrapper{
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+
+  header{
+    min-height: 10%;
+
+    div{
+      display: inline-block;
+      vertical-align: bottom;
+      float: none;
+      width: 49%;
+
+      nav{
+        text-align: right;
+      }
+    }
+  }
+
+  section{
+    min-height: 85%;
+
+    div{
+      display: none;
+
+      &.active{
+        display: block;
+      }
+    }
+
+  }
+
+  footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+  }
+
+}
+
