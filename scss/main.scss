@@ -48,7 +48,7 @@ body{
   /*Section styles to APP*/
   section{
     max-height: 85%;
-    overflow: auto;
+    //overflow: auto;
 
     /*For active section*/
     .section{
@@ -81,6 +81,8 @@ body{
 
 
     .part{
+      height: 75vh;
+      overflow: auto;
       /*Second part: States*/
       &.states.active{
         @include span(12 of 12 at 1);
@@ -125,8 +127,16 @@ body{
       }
       &.universities.active{
         @include span(9 of 12 at 4);
+        margin-top: 10px;
         margin-right: 0;
         display: block;
+        overflow: auto;
+        padding: 5px 10px;
+
+        .university{
+          border-bottom: 1px solid #c4c4c4;
+          padding-bottom: 8px
+        }
       }
     }
 
