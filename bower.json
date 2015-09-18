@@ -7,8 +7,17 @@
   "description": "Mexican Universities, a project demostration for workshop 'Spa with Rest API' to ITP in Sowftware Freedom Day",
   "main": "js/app.js",
   "keywords": [
-    "Mexican"
+    "Mexican",
+    "Universities",
+    "Backbone",
+    "SPA",
+    "REST API"
   ],
+  "dependencies": {
+    "jquery": "latest",
+    "backbone": "latest",
+    "bootstrap-sass": "latest"
+  },
   "license": "MIT",
   "ignore": [
     "**/.*",
