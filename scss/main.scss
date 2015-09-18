@@ -36,11 +36,30 @@ body{
   section{
     min-height: 85%;
 
-    div{
+    .section{
       display: none;
 
       &.active{
         display: block;
+      }
+    }
+
+    .profileContent{
+      .user-profile{
+        margin: 0 auto;
+        width: 400px;
+
+        div{
+          display: inline-block;
+        }
+      }
+      .info-profile div{
+        display: block;
+        margin-left: 15px;
+      }
+      .actions{
+        margin-top: 15px;
+        text-align: center;
       }
     }
 
