@@ -14,9 +14,10 @@
     "REST API"
   ],
   "dependencies": {
-    "jquery": "latest",
     "backbone": "latest",
-    "bootstrap-sass": "latest"
+    "bootstrap-sass": "latest",
+    "jquery": "latest",
+    "susy": "~2.2.6"
   },
   "license": "MIT",
   "ignore": [
