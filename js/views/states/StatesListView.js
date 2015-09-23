@@ -16,7 +16,7 @@ define([
             console.log("Init StatesListView");
 
             this.collection = new StatesListCollection();
-            this.collection.fetch({ dataType: "jsonp" });
+            this.collection.fetch({ dataType: "json" });
 
             console.log(this.collection);
 
