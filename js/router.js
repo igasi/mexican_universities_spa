@@ -3,10 +3,8 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'views/home/HomeView',
-    'views/projects/ProjectsView',
-    'views/contributors/ContributorsView',
-    'views/footer/FooterView'
+    //Add here viewsApp
+
 ], function($, _, Backbone, HomeView, ProjectsView, ContributorsView, FooterView) {
 
     var AppRouter = Backbone.Router.extend({
@@ -51,7 +49,7 @@ define([
 
             // We have no matching route, lets display the home page
             //var homeView = new HomeView();
-            **homeView.render();
+            //homeView.render();
         });
 
         // Unlike the above, we don't call render on this view as it will handle
