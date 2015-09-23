@@ -5,10 +5,17 @@ module.exports = function (grunt) {
                 files: ['**/*.scss', '**/*.php'],
                 tasks: ['compass:dev']
             },
-           options: {
+            options: {
                 //livereload: true,
             },
+            jst: {
+                files: [
+                    'js/templates/*.ejs'
+                ],
+                tasks: ['jst']
+            }
         },
+
         compass: {
             dev: {
                 options: {
@@ -19,9 +26,48 @@ module.exports = function (grunt) {
                     outputStyle: 'compressed'
                 }
             }
+        },
+
+        jst: {
+            compile: {
+                files: {
+                    'js/templates.js': ['js/templates/*.ejs']
+                }
+            }
+        },
+
+        jshint: {
+            options: {
+                forin: true,
+                eqeqeq: true,
+                undef: true,
+                curly: true,
+                browser: true,
+                latedef: true,
+                newcap: true,
+                scripturl: true,
+
+                globals: {
+                    jQuery: true,
+                    Drupal: true,
+                    Modernizr: true
+                }
+            },
+
+            all: ['js/*.js']
         }
+
     });
+
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jst');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+
+    grunt.registerTask('compilejst', function () {
+        grunt.file.write('js/templates.js', 'this.JST = this.JST || {};');
+        grunt.task.run(['jst']);
+    });
+
 };

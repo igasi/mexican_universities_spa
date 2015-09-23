@@ -18,6 +18,7 @@
     "bootstrap-sass": "latest",
     "susy": "latest",
     "backbone": "latest",
+    "lodash": "latest",
     "underscore": "latest",
     "requirejs": "latest"
   },

@@ -6,9 +6,10 @@
 require.config({
     paths: {
         jquery: 'vendor/jquery/dist/jquery.min',
+        jst: 'vendor/lodash/lodash.min',
         underscore: 'vendor/underscore/underscore-min',
         backbone: 'vendor/backbone/backbone-min',
-        templates: '../templates'
+        templates: 'templates'
     }
 
 });
@@ -18,6 +19,7 @@ require([
     'app',
 
 ], function(App){
+    console.log("Init");
     // The "app" dependency is passed in as "App"
     // Again, the other dependencies passed in are not "AMD" therefore don't pass a parameter to this function
     App.initialize();

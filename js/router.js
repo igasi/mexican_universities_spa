@@ -1,25 +1,19 @@
 // Filename: router.js
 define([
     'jquery',
+    'jst',
     'underscore',
     'backbone',
     //Add here viewsApp
+    'views/states/StatesListView',
 
-], function($, _, Backbone, HomeView, ProjectsView, ContributorsView, FooterView) {
+], function($, JST, _, Backbone, StatesListView) {
 
     var AppRouter = Backbone.Router.extend({
 
-        //Default configuration settings
-        config:  {
-            //Config base URL for access to REST API
-            "base_url": "http://45.55.24.20/",
-            //Define debug mode
-            "debug": false,
-        },
-
         routes: {
             //home
-            '': 'function',
+            '': 'states',
 
             // Default
             '*actions': 'defaultAction'
@@ -37,19 +31,19 @@ define([
 
         var app_router = new AppRouter;
 
-        app_router.on('route:', function(){
+        app_router.on('route:states', function(){
 
             // Call render on the module we loaded in via the dependency array
-            //var projectsView = new ProjectsView();
-            //projectsView.render();
+            console.log('Init Router default');
+            var statesView = new StatesListView();
+            statesView.render();
 
         });
 
         app_router.on('route:defaultAction', function (actions) {
 
             // We have no matching route, lets display the home page
-            //var homeView = new HomeView();
-            //homeView.render();
+
         });
 
         // Unlike the above, we don't call render on this view as it will handle
