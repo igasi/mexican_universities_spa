@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Mexican Universities</title>
 
+    <!-- data-main attribute tells require.js to load
+            scripts/main.js after require.js loads. -->
+    <script data-main="js/main" src="js/requirejs/require.js"></script>
+
     <meta name="description" content="Mexican Universities, a project demostration for workshop 'Spa with Rest API' to ITP in Sowftware Freedom Day">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,7 +35,7 @@
         </header>
 
         <section class="row">
-            <div class="col-md-12 section profile">
+            <div class="col-md-12 section profile active">
                 <h2>PROFILE</h2>
                 <div class="profileContent">
                     <div class="user-profile">
@@ -49,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row section app active">
+            <div class="row section app">
                 <div class="part states ">
                     <h2>STATES</h2>
 
@@ -64,7 +68,7 @@
                         </div>
                     </div>
 
-                    <div class="state active">
+                    <div class="state">
                         <div class="state-profile">
                             <div class="stateImg"><img src="http://lorempixel.com/140/140/city/" alt=""></div>
                         </div>
@@ -207,23 +211,6 @@
 
     </div>
 
-    <!-- TEMPLATES -->
-    <!-- Profile -->
-    <script id="tiendaTemplate" type="text/template">
-
-    </script>
-
-
-    <!-- LIBRARIES -->
-    <!-- jQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-
-    <!-- Backbone dependencies -->
-    <script src="bower_components/underscore/underscore-min.js"></script>
-    <script src="bower_components/backbone/backbone-min.js"></script>
-
-
-    <script src="js/app.js"></script>
 
 </body>
 </html>
